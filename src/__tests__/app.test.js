@@ -1,6 +1,6 @@
 import React from 'react';
 // import renderer from 'react-test-renderer';
-import Index from '../index';
+import App from '../app';
 
 describe('<App />', () => {
   it('is rendered at application start', () => {
