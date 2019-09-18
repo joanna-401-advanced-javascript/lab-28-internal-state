@@ -3,17 +3,22 @@ import React from 'react';
 export default class extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      count: 0,
+      name: null,
+    };
   }
 
   handleChange = (event) => {
-    // this.setState({ name: event.target.value });
     event.preventDefault();
-    this.props.handleName(event.target.value);
+    this.setState({ name: event.target.value });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.handleCount();
+    this.setState(previousState => ({
+      count: previousState.count + 1,
+    }));
   };
 
   render(){
