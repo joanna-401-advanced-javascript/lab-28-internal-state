@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './app';
+import './styles.css';
 
-class Main extends React.Component {
+class App extends React.Component {
   render() {
-    return <App />;
+    return (
+      <React.Fragment>
+        <div>
+          <div>Name: </div>
+          <div># of Updates: </div>
+        </div>
+      </React.Fragment>
+    );
   }
 }
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<Main />, rootElement);
+ReactDOM.render(<App />, rootElement);
